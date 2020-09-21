@@ -25,44 +25,38 @@
 </head>
 
 <body>
-	<main id="main" class="main" role="main">
-
-
-
+	<main class="main" role="main">
+	
 		<!-- The overlay nav -->
-	<nav id="section--nav" class="section--nav menu__container">
+	<nav class="section--nav menu--container">
 		<!-- Use any element to open/show the overlay navigation menu -->
-	<button id="openbtn" class="openbtn menu__button__openbtn" aria-expanded="true" aria-haspopup="true" aria-controls="menu-list"><span>&#9776;</span></button>
+	<button id="openbtn" class="openbtn menu__button__openbtn" aria-expanded="true" aria-haspopup="true" aria-controls="menu-list" title="open"><span>&#9776;</span></button>
 
 		<div id="section--nav__overlay" class="section--nav__overlay  menu" role="menu">
 		<!-- close button is an element of the overlay navigation menu -->
-			<button id="closebtn" class="closebtn menu__button__closebtn"><span>&times;</span></button>
+			<button id="closebtn" class="closebtn menu__button__closebtn" title="close"><span>&times;</span></button>
 			<div class="overlay-content">
-				<ol class="links-list">
-					<li role="menuitem" class="links-list__item menu__item"><a href="#introduction" class="menu__link">Introduction</a></li>
-					<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints" class="menu__link">BEM Widgets:</a>
-						<ul class="links-list">
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--collapsible-sections"class="menu__link">Collapsible Sections</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--cards-cities-overview" class="menu__link">Cards - Cities</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-1" class="menu__link">...blank subsection 1</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-2" class="menu__link">...blank subsection 2</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-3" class="menu__link">...blank subsection 3</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-4" class="menu__link">...blank subsection 4</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-5" class="menu__link">...blank subsection 5</a></li>
-							<li role="menuitem" class="links-list__item menu__item"><a href="#endpoints--blank-section-6" class="menu__link">...blank subsection 6</a></li>
+				<ol class="menu__ordered-list">
+					<li role="menuitem" class="menu__item"><a href="#introduction" class="menu__link">Introduction</a></li>
+					<li role="menuitem" class="menu__item"><a href="#endpoints" class="menu__link">BEM Widgets:</a>
+						<ul class="menu__unordered-list">
+							<li role="menuitem" class="menu__item"><a href="#endpoints--collapsible-sections"class="menu__link">Collapsible Sections</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--cards-cities-overview" class="menu__link">Collapsible Sections with Cards</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-1" class="menu__link">Section with Cards</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-2" class="menu__link">...blank subsection 2</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-3" class="menu__link">...blank subsection 3</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-4" class="menu__link">...blank subsection 4</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-5" class="menu__link">...blank subsection 5</a></li>
+							<li role="menuitem" class="menu__item"><a href="#endpoints--blank-section-6" class="menu__link">...blank subsection 6</a></li>
 						</ul>
 					</li>
-				<li role="menuitem" class="links-list__item menu__item"><a href="#links" class="menu__link">Links</a></li>
-				<li role="menuitem" class="links-list__item menu__item"><a href="#expanders" class="menu__link">Expanders</a></li>
+				<li role="menuitem" class="menu__item"><a href="#links" class="menu__link">Links</a></li>
 				</ol>
 			</div>
 		</div>
 	</nav>
 
 	<div class="main__container">
-
-
-
 	<header id="header" class="main__content-header__sticky">
 			<h1>BEM widgets for a website accessible to people with disabilities</h1>
 			<h2 style="color: green;">(Smooth Scrolling Sticky ScrollSpy Navigation)</h1>
@@ -73,235 +67,236 @@
         <section id="introduction" class="main__content-section introduction" style="height:92vh;">
             <h2>Introduction</h2>
             <p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-				Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<q>
+					The following work was created in order to develop and implement several effective widgets / components that can be placed on websites, created strictly according to the rules of the BEM methodology and in accordance with the WAI-ARIA standard. The widgets themselves are also useful and functional elements of the website (responsive menu, expandable section blocks, link tiles-elements), easy to integrate also in the implementation of other projects, while maintaining a good visual side (aesthetics and functionality). Based on these criteria, the idea of combining the assumptions of the BEM methodology with the attributes of the WAI-ARIA standard is implemented.
+				</q>
 			</p>
         </section>
 
         <section id="endpoints" class="main__content-section endpoints">
             <h2>BEM Widgets</h2>
 
-            <section id="endpoints--collapsible-sections" class="main__content-subsection endpoints--collapsible-sections">
+            <section id="endpoints--collapsible-sections" class="main__content-subsection">
 
                 <h3>Collapsible Sections</h3>
-				<div style="overflow:auto;" class="endpoints--collapsible-sections__container collapsible-section__container">
+				<div style="overflow:auto;" class="collapsible-sections">
+						
+						<div class="collapsible-sections--item">
 						<h4>
-							<button aria-expanded="false" class="endpoints--collapsible-section__button collapsible-section__button">
+							<button aria-expanded="false" class="collapsible-sections--item__button">
 								Collapsible sections - Subsection 1
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-									<rect class="vert" height="8" width="2" y="1" x="4"/>
+								<svg class="collapsible-sections--item__button__svg" aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+									<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
 									<rect height="2" width="8" y="4" x="1"/>
 								</svg>
 							</button>
 						</h4>
-						<div class="collapsible-section__item">
-							<section class="collapsible-section__content" style="margin: 0; padding: 0;">
+						<div hidden class="collapsible-sections--item__content">
+							<section class="collapsible-sections--item__content--section" style="margin: 0; padding: 0;">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros.</p>
 							</section>
 						</div>
-
-						<h4>
-							<button aria-expanded="false" class="endpoints--collapsible-section__button collapsible-section__button">
-								Collapsible sections - Subsection 2
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-									<rect class="vert" height="8" width="2" y="1" x="4"/>
-									<rect height="2" width="8" y="4" x="1"/>
-								</svg>
-							</button>
-						</h4>
-						<div class="collapsible-section__item">
-							<section class="collapsible-section__content" style="margin: 0; padding: 0;">
-								<p>Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero.</p>
-							</section>
 						</div>
 
-						<h4>
-							<button aria-expanded="false" class="endpoints--collapsible-section__button collapsible-section__button">
-								Collapsible sections -  Subsection 3
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-									<rect class="vert" height="8" width="2" y="1" x="4"/>
-									<rect height="2" width="8" y="4" x="1"/>
-								</svg>
-							</button>
-						</h4>
-						<div class="collapsible-section__item">
-							<section class="collapsible-section__content" style="margin: 0; padding: 0;">
-								<p>Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero.</p>
-							</section>
-						</div>
+						
+						<div class="collapsible-sections--item">
+							<h4>
+								<button aria-expanded="false" class="collapsible-sections--item__button">
+									Collapsible sections - Subsection 2
+									<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+										<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
+										<rect height="2" width="8" y="4" x="1"/>
+									</svg>
+								</button>
+							</h4>
+							<div hidden class="collapsible-sections--item__content">
+								<section class="collapsible-sections--item__content--section" style="margin: 0; padding: 0;">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros.</p>
+								</section>
+							</div>
+							</div>
 
-						<h4>
-							<button aria-expanded="false" class="endpoints--collapsible-section__button collapsible-section__button">
-								Collapsible sections - Subsection 4
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-									<rect class="vert" height="8" width="2" y="1" x="4"/>
-									<rect height="2" width="8" y="4" x="1"/>
-								</svg>
-							</button>
-						</h4>
-						<div class="collapsible-section__item">
-							<section class="collapsible-section__content" style="margin: 0; padding: 0;">
-								<p>Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero.</p>
-							</section>
-						</div>
+							<div class="collapsible-sections--item">
+								<h4>
+									<button aria-expanded="false" class="collapsible-sections--item__button">
+										Collapsible sections - Subsection 3
+										<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+											<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
+											<rect height="2" width="8" y="4" x="1"/>
+										</svg>
+									</button>
+								</h4>
+								<div hidden class="collapsible-sections--item__content">
+									<section class="collapsible-sections--item__content--section" style="margin: 0; padding: 0;">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros.</p>
+									</section>
+								</div>
+								</div>
 
-						<h4>
-							<button aria-expanded="false" class="endpoints--collapsible-section__button collapsible-section__button">
-								Collapsible sections - Subsection 5
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-									<rect class="vert" height="8" width="2" y="1" x="4"/>
-									<rect height="2" width="8" y="4" x="1"/>
-								</svg>
-							</button>
-						</h4>
-						<div class="collapsible-section__item">
-							<section class="collapsible-section__content" style="margin: 0; padding: 0;">
-								<p>Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero.</p>
-							</section>
-						</div>
+								<div class="collapsible-sections--item">
+									<h4>
+										<button aria-expanded="false" class="collapsible-sections--item__button">
+											Collapsible sections - Subsection 4
+											<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+												<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
+												<rect height="2" width="8" y="4" x="1"/>
+											</svg>
+										</button>
+									</h4>
+									<div hidden class="collapsible-sections--item__content">
+										<section class="collapsible-sections--item__content--section" style="margin: 0; padding: 0;">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros.</p>
+										</section>
+									</div>
+									</div>
+
+									<div class="collapsible-sections--item">
+										<h4>
+											<button aria-expanded="false" class="collapsible-sections--item__button">
+												Collapsible sections - Subsection 5
+												<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+													<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
+													<rect height="2" width="8" y="4" x="1"/>
+												</svg>
+											</button>
+										</h4>
+										<div hidden class="collapsible-sections--item__content">
+											<section class="collapsible-sections--item__content--section" style="margin: 0; padding: 0;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet quis sed eros.</p>
+											</section>
+										</div>
+										</div>
 				</div>
             </section>
 
             <section id="endpoints--cards-cities-overview" class="main__content-subsection endpoints--cards-cities-overview">
 
-                <h3>Cards Cities Overview</h3>
-				<div  class="endpoints--cards-cities-overview__container collapsible-section__container">
-					<h4>
-								<button aria-expanded="false" class="endpoints--cards-cities-overview__collapsible-section__button collapsible-section__button">
-									Cards Cities Overview - Collapsible Subsection
-									<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
-										<rect class="vert" height="8" width="2" y="1" x="4"/>
-										<rect height="2" width="8" y="4" x="1"/>
-									</svg>
-								</button>
-					</h4>
-					<div class="cards__container cards collapsible-section__item" >
+                <h3>Collapsible Section with Cards</h3>
+				<div  class="collapsible-section__container">
+					
+					<div class="collapsible-sections--item">
+						<h4>
+							<button aria-expanded="false" class="collapsible-sections--item__button">
+								Collapsible Section - Cards
+								<svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+									<rect class="collapsible-sections--item__button__vert" height="8" width="2" y="1" x="4"/>
+									<rect height="2" width="8" y="4" x="1"/>
+								</svg>
+							</button>
+						</h4>
+					<div hidden class="cards__container cards collapsible-sections--item__content" >
 						<ul>
-							<li class="cards__item card">
-								<div class="cards__item-img img"><img src="images/e44.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">A card link </a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/e44.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">A card link </a></h2>
 									<p>Commodo ut laborum fugiat aliqua eiusmod voluptate pariatur.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/img_cities0.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Another card link instance</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/img_cities0.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Another card link instance</a></h2>
 									<p>Cupidatat tempor sint mollit in tempor ut fugiat excepteur laborum labore.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e4.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">And another card link</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/e4.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">And another card link</a></h2>
 									<p>Eu dolore labore ad occaecat minim in minim ad ea commodo excepteur ullamco.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e43.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">And so on...</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/e43.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">And so on...</a></h2>
 									<p>Non officia quis sint commodo reprehenderit consectetur ipsum ex eu.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/b&amp;w0cities.png" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Very important card</a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/b&amp;w0cities.png" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Very important card</a></h2>
 									<p>Dolore nisi deserunt quis occaecat sunt eiusmod exercitation nostrud ad dolore cupidatat exercitation minim.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/WildWestTowns__Fortworth_shutterstock_204315391.webp" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Just another card link</a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/WildWestTowns__Fortworth_shutterstock_204315391.webp" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Just another card link</a></h2>
 									<p>Sunt deserunt ea sint enim laborum ut qui cupidatat esse sit labore ut.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e44.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">A card same as first card</a></h2>
-									<p>Commodo ut laborum fugiat aliqua eiusmod voluptate pariatur.</p>
-									<small>By John Doe</small>
-								</div>
-							</li>
+							
 						</ul>
 					</div>
-			</div>
+					</div>
+				</div>
+			
             </section>
 
 
             <section id="endpoints--blank-section-1" class="main__content-subsection endpoints--blank-section">
-                <h3>Blank Subsection 1</h3>
+                <h3>Section with Cards</h3>
                 <p class="endpoints--blank-section__paragraph">…</p>
-				<div class="cards__container cards collapsible-section__item">
+				<div class="cards__container cards">
 						<ul>
-							<li class="cards__item card">
-								<div class="cards__item-img img"><img src="images/e44.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">A card link </a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/e44.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards__link"  aria-describedby="description-card">A card link </a></h2>
 									<p>Commodo ut laborum fugiat aliqua eiusmod voluptate pariatur.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/img_cities0.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Another card link instance</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/img_cities0.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Another card link instance</a></h2>
 									<p>Cupidatat tempor sint mollit in tempor ut fugiat excepteur laborum labore.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e4.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">And another card link</a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/e4.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">And another card link</a></h2>
 									<p>Eu dolore labore ad occaecat minim in minim ad ea commodo excepteur ullamco.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e43.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">And so on...</a></h2>
+							<li class="cards-item card">
+								<div class="cards-item__img img"><img src="images/e43.jpg" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">And so on...</a></h2>
 									<p>Non officia quis sint commodo reprehenderit consectetur ipsum ex eu.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/b&amp;w0cities.png" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Very important card</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/b&amp;w0cities.png" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Very important card</a></h2>
 									<p>Dolore nisi deserunt quis occaecat sunt eiusmod exercitation nostrud ad dolore cupidatat exercitation minim.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more <span>&rarr;</span></small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/WildWestTowns__Fortworth_shutterstock_204315391.webp" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">Just another card link</a></h2>
+							<li class="cards-item  card">
+								<div class="cards-item__img img"><img src="images/WildWestTowns__Fortworth_shutterstock_204315391.webp" alt=""></div>
+								<div class="cards-item__text text">
+									<h2><a href="#card-link" class="cards-item__link"  aria-describedby="description-card">Just another card link</a></h2>
 									<p>Sunt deserunt ea sint enim laborum ut qui cupidatat esse sit labore ut.</p>
-									<small>By John Doe</small>
+									<small class="cards-item__text_readmore" aria-hidden="true" id="description-card">Read more &rarr;</small>
 								</div>
 							</li>
-							<li class="cards__item  card">
-								<div class="cards__item-img img"><img src="images/e44.jpg" alt=""></div>
-								<div class="cards__item-text text">
-									<h2><a href="#card-link" class="cards__link">A card same as first card</a></h2>
-									<p>Commodo ut laborum fugiat aliqua eiusmod voluptate pariatur.</p>
-									<small>By John Doe</small>
-								</div>
-							</li>
+							
 						</ul>
 					</div>
             </section>
@@ -334,30 +329,22 @@
 				<ol class="links-list">
 					<li class="end--sections__links-list__item links-list__item"><a href="https://en.bem.info/methodology/quick-start/" target="_blank" class="links-list__item__link">Quick start to BEM methodology</a></li>
 					<li class="end--sections__links-list__item links-list__item"><a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank" class="links-list__item__link">WAI-ARIA Overview</a></li>
-					<li class="end--sections__links-list__item links-list__item"><a href="https://webworkshop.pl/czym-sa-aria-labels/" target="_blank" class="links-list__item__link">ARIA Labels - PL</a></li>
 					<li class="end--sections__links-list__item links-list__item"><a href="https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states/?fbclid=IwAR1_t5U_erE-0gUrxswpj9UW8zCuVRisAj51UL49_KzNIc4dNDt-kfdWIrI" target="_blank" class="links-list__item__link">Sticky Table of Contents with Scrolling Active States</a></li>
-					<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/" target="_blank" class="links-list__item__link">Inclusive Components</a>
-						<ul class="links-list">
-							<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/collapsible-sections/" target="_blank" class="links-list__item__link">Collapsible Sections</a></li>
-							<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/a-content-slider/" target="_blank" class="links-list__item__link">Content Slider</a></li>
-							<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/menus-menu-buttons/" target="_blank" class="links-list__item__link">Menus & Menu Buttons</a></li>
-							<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/cards/" target="_blank" class="links-list__item__link">Cards</a></li>
-						</ul>
-					</li>
-
+					<li class="end--sections__links-list__item links-list__item"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" class="links-list__item__link">Intersection Observer API</a></li>
+					<li class="end--sections__links-list__item links-list__item"><a href="https://inclusive-components.design/" target="_blank" class="links-list__item__link">Inclusive Components</a></li>
+					<li class="end--sections__links-list__item links-list__item"><a href="https://developer.mozilla.org/en-US/" target="_blank" class="links-list__item__link">MDN Web Docs</a></li>
+					<li class="end--sections__links-list__item links-list__item"><a href="https://www.w3schools.com/" target="_blank" class="links-list__item__link">w3schools.com</a></li>
+					
 				</ol>
 			</section>
-			<section id="expanders" class="main__content-subsection end--sections__expanders" style="height:95vh;">
-				<h2>Expanders</h2>
-				<p class="end--sections__expanders__paragraph">…</p>
-			</section>
+			
 		</section>
     </div>
 
 	<div class="window__InnerSize" style="border: 1px solid #111; margin-top: 10px;">
-		<span id="window__InnerWidth" class="windowInnerHeight"></span>
+		<span class="window__InnerWidth"></span>
 		<span> x </span>
-		<span id="window__InnerHeight" class="windowInnerHeight"></span>
+		<span class="window__InnerHeight"></span>
 	</div>
 
 	</div>

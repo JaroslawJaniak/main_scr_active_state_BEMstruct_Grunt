@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-	document.getElementById("openbtn").classList.add('menu__button__openbtn__active');
+	document.getElementById("openbtn").style.color = "#111";
 });
 
 (function() {
@@ -47,7 +47,6 @@ openNav = () => {
 	document.getElementById("section--nav__overlay").style.height = "100%";
 	document.getElementById("section--nav__overlay").style.opacity = "1";
 	document.getElementById("section--nav__overlay").style.visibility = "visible";
-	//document.getElementById("openbtn").classList.add('menu__button__openbtn__active'); //do wywalenia raczej
 	document.getElementById("section--nav__overlay").style.display = "block";
 	document.getElementById("closebtn").style.display = "block";
 

@@ -3,7 +3,7 @@
     list-style: none;
 }
 
-.cards__item + .cards__item {
+.cards-item + .cards-item {
     margin-top: 1.5rem;
 }
 
@@ -15,86 +15,100 @@
         grid-row-gap: 1rem;
     }
 
-    .cards__item + .cards__item {
+    .cards-item + .cards-item {
         margin-top: 1.5rem;
     }
 }
 
-.cards__item {
-  border: 1px solid;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-	 margin-top: 1.5rem;
+.cards-item {
+  	border: 1px solid;
+  	border-radius: 0.25rem;
+  	display: flex;
+  	flex-direction: column;
+  	position: relative;
+	margin-top: 1.5rem;
 }
 
-.cards__item .cards__item-text {
-  padding: 1rem;
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
+.cards-item .cards-item__text {
+  	padding: 1rem;
+  	flex: 1 0 auto;
+  	display: flex;
+  	flex-direction: column;
 }
 
-.cards__item p {
-  max-width: 60ch;
+.cards-item p {
+  	max-width: 60ch;
 }
 
-.cards__item .cards__item-img {
-  height: 6.5rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1rem));
+.cards-item .cards-item__img {
+  	height: 6.5rem;
+  	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1rem));
 }
 
-.cards__item .cards__item-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
+.cards-item .cards-item__img img {
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+  	filter: grayscale(100%);
 }
 
-.cards__item a {
-  text-decoration: none;
+.cards-item a {
+  	text-decoration: none;
 }
 
-.cards__item a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+.cards-item a::after {
+  	content: '';
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+	right: 0;
+	bottom: 0;
 }
 
-.cards__item a:focus {
-  outline: none;
-  text-decoration: underline;
+.cards-item a:focus {
+	outline: none;
+	text-decoration: underline;
 }
 
-.cards__item:focus-within {
+.cards-item:focus-within {
 	box-shadow: -0px 2px 8px 0.1rem;
 	top: -4px;
 }
 
-.cards__item:hover {
-  box-shadow: -0px 2px 8px 0.1rem;
-  top: -4px;
-  transition: all 0.25s;
-  transition-timing-function: ease;
+.cards-item:hover {
+	box-shadow: -0px 2px 8px 0.1rem;
+	top: -4px;
+	transition: all 0.25s;
+	transition-timing-function: ease;
 }
 
-.cards__item:focus-within a:focus {
-  text-decoration: none;
+.cards-item h2 a:focus {
+    text-decoration: underline;
 }
 
-.cards__item small {
-  display: block;
+.cards-item:focus-within a:focus {
+  	text-decoration: none;
 }
 
-.cards__item .cards__item-text > * + * {
+.cards-item h2:focus-within ~ .cards-item__text_readmore {
+    color: red;
+}
+
+.cards-item__text_readmore {
+	border-radius: 0.25rem;
+	text-align: center;
+	display: block;
+}
+
+.cards-item small {
+  	display: block;
+}
+
+.cards-item .cards-item__text > * + * {
   margin-top: 0.75rem;
 }
 
-.cards__item .cards__item-text > :last-child {
+.cards-item .cards-item__text > :last-child {
   margin-top: auto;
   padding-top: 0.75rem;
 }
@@ -106,7 +120,7 @@
       padding-inline-start: 0px;
     }
 
-    .cards__item + .cards__item {
+    .cards-item + .cards-item {
       margin-top: 1.5rem;
     }
   }
@@ -116,7 +130,7 @@
 	width: 100%;
 }
 
-h4 .collapsible-section__button {
+h4 .collapsible-sections--item__button {
 	all: inherit;
 	display: flex;
 	justify-content: space-between;
@@ -126,21 +140,21 @@ h4 .collapsible-section__button {
 	border-radius: 0.25rem;
 }
 
-h4 .collapsible-section__button:focus svg {
+h4 .collapsible-sections--item__button:focus svg {
 	outline: 2px solid;
 }
 
-.collapsible-section__button svg {
+.collapsible-sections--item__button svg {
 	height: 1em;
 	margin-left: 0.5em;
 	margin-right: 0.5rem;
 }
 
-.collapsible-section__button:hover {
+.collapsible-sections--item__button:hover {
 	cursor: pointer;
 }
 
-[aria-expanded="true"] .vert {
+[aria-expanded="true"] .collapsible-sections--item__button__vert {
 	opacity: 0.0;
 	transition: all 100ms;
 }
@@ -149,14 +163,14 @@ h4 .collapsible-section__button:focus svg {
   fill: currentColor;
 }
 
-.collapsible-section__content {
+.collapsible-sections--item__content--section {
 	margin: 0;
 	padding: 0.5rem;
 	position: relative;
 	width: 100%;
 }
 
-.collapsible-section__item{
+.collapsible-section__item----content{
 	overflow-x: hidden;
 }
 
@@ -180,17 +194,17 @@ h4 .collapsible-section__button:focus svg {
 	overflow-y: hidden;
 }
 
-.links-list {
+.links-list, .menu__unordered-list, .menu__ordered-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.links-list__item {
+.links-list__item, .menu__item {
     margin-left: 1rem;
 }
 
-.links-list__item__link {
+.links-list__item__link, .menu__link {
 	color: #666;
 	text-decoration: none;
     display: block;
@@ -354,11 +368,11 @@ p {
 }
 
 .section--nav {
-  position: sticky;
+  	position: sticky;
 	height: 90vh;
 	top: 1.5rem;
-  align-self: start;
-  border-right: 1px solid #efefef;
+  	align-self: start;
+  	border-right: 1px solid #efefef;
 	background-color: rgba(0, 0, 0, 0.0);;
 }
 
@@ -423,12 +437,12 @@ p {
 }
 
 .section--nav__overlay a{
-  font-size: 0.8rem;
+  	font-size: 0.8rem;
 	text-decoration: none;
-  display: block;
-  padding: .125rem 0;
-  color: #ccc;
-  transition: all 500ms ease-out;
+  	display: block;
+  	padding: .125rem 0;
+  	color: #ccc;
+  	transition: all 500ms ease-out;
 }
 
 .section--nav li.active > a {
@@ -496,20 +510,20 @@ collapsible-section__container::-webkit-scrollbar-thumb:hover {
 background: #000;
 }
 
-collapsible-section__item::-webkit-scrollbar {
+collapsible-section__item--content::-webkit-scrollbar {
   width: 10px;
 }
 
-collapsible-section__item::-webkit-scrollbar-track {
+collapsible-section__item--content::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px grey;
   border-radius: 10px;
 }
 
-collapsible-section__item::-webkit-scrollbar-thumb {
+collapsible-section__item--content::-webkit-scrollbar-thumb {
   background: #666;
   border-radius: 10px;
 }
 
-collapsible-section__item::-webkit-scrollbar-thumb:hover {
+collapsible-section__item--content::-webkit-scrollbar-thumb:hover {
 background: #000;
 }
