@@ -1,3 +1,5 @@
+/*js\menu__active--track.js*/
+
 window.addEventListener('DOMContentLoaded', () => {
 	document.querySelector(".main").scrollIntoView();
 	document.querySelector(".window__InnerHeight").innerHTML = window.innerHeight;
@@ -40,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
   });
 
-	//jesli dokument otwarto w oknie mnijszym równym 920
+	
 	if (window.innerWidth <= 920) {
 			document.querySelectorAll(`nav li a`).forEach((navlink) => {
 				navlink.addEventListener('click', opencloseNav);
@@ -53,7 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 	};
 
-	//przy zmianie rozmiarow okna dokumentu nadaj funkcjonalnosci ponizej
 	window.addEventListener("resize", function(){
 			if (window.innerWidth <= 920) {
 				document.querySelectorAll(`nav li a`).forEach((navlink) => {

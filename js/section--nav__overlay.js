@@ -1,3 +1,5 @@
+/*js\section--nav__overlay.js*/
+
 window.addEventListener('DOMContentLoaded', () => {
 	document.getElementById("openbtn").style.color = "#111";
 });
@@ -31,7 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 })()
 
-//ta funkcja uzyta jest w pliku 'menu__active--track.js' i podpieta jest pod linki nawigacji przy rozdzielczosci mniejszej niz 920px
 opencloseNav = () => {
 	let expanded = document.getElementById("openbtn").getAttribute('aria-expanded') === 'true';
 	document.getElementById("openbtn").setAttribute('aria-expanded', !expanded);

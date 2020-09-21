@@ -1,3 +1,5 @@
+/*js\collapsible-section.js*/
+
 (function() {
 	const headings = document.querySelectorAll('h4');
 
@@ -23,4 +25,4 @@
 			}
 		  }
 	});
-})()
+})() 

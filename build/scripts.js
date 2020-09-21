@@ -84,7 +84,6 @@ window.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
   });
 
-	//jesli dokument otwarto w oknie mnijszym równym 920
 	if (window.innerWidth <= 920) {
 			document.querySelectorAll(`nav li a`).forEach((navlink) => {
 				navlink.addEventListener('click', opencloseNav);
@@ -97,7 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
 			}
 	};
 
-	//przy zmianie rozmiarow okna dokumentu nadaj funkcjonalnosci ponizej
 	window.addEventListener("resize", function(){
 			if (window.innerWidth <= 920) {
 				document.querySelectorAll(`nav li a`).forEach((navlink) => {
@@ -150,7 +148,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 })()
 
-//ta funkcja uzyta jest w pliku 'menu__active--track.js' i podpieta jest pod linki nawigacji przy rozdzielczosci mniejszej niz 920px
 opencloseNav = () => {
 	let expanded = document.getElementById("openbtn").getAttribute('aria-expanded') === 'true';
 	document.getElementById("openbtn").setAttribute('aria-expanded', !expanded);
