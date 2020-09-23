@@ -79,7 +79,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
   	document.querySelectorAll('section[class]').forEach((section) => {
-	console.log("section[id]: " +  section);
 		section.style.color = "	#333";
         observer.observe(section);
   });
